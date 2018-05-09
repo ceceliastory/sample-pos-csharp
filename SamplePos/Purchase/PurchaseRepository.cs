@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SamplePos.Purchase
 {
-    interface IPurchaseRepository
+    class PurchaseRepository : IPurchaseRepository
     {
-        void Add(string itemId);
+        public void Add(string param)
+        {
+            Console.WriteLine("hey");
+        }
     }
 }

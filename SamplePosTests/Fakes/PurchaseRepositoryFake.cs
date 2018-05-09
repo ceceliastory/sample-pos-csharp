@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SamplePos.Purchase;
 
 namespace SamplePosTests.Fakes
 {
-    class PurchaseRepositoryFake
+    class PurchaseRepositoryFake : IPurchaseRepository
     {
+        public bool AddWasCalled { get; private set; } = false;
+        private object addWasCalledWithValue;
+
+        public void Add(string param)
+        {
+            AddWasCalled = true;
+            addWasCalledWithValue = param;
+        }
+
+        public bool AddWasCalledWith(string value)
+        {
+            return addWasCalledWithValue.Equals(value);
+        }
     }
 }

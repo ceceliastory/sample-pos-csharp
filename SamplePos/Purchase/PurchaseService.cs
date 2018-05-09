@@ -7,9 +7,16 @@ namespace SamplePos.Purchase
 {
     public class PurchaseService
     {
+        private readonly IPurchaseRepository purchaseRepository;
+
+        public PurchaseService(IPurchaseRepository purchaseRepository)
+        {
+            this.purchaseRepository = purchaseRepository;
+        }
+
         public void Add(string itemId)
         {
-            throw new NotImplementedException();
+            purchaseRepository.Add(itemId);
         }
     }
 }
