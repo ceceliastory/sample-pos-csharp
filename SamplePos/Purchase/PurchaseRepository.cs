@@ -10,7 +10,7 @@ namespace SamplePos.Purchase
     {
         public void Add(string param)
         {
-            Console.WriteLine("hey");
+            Console.WriteLine("hey there you're in repo with " + param);
         }
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="Fakes\PurchaseRepositoryFake.cs" />
     <Compile Include="PurchaseServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PosViewModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

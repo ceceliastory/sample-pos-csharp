@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SamplePos.Purchase
 {
-    public class PurchaseService
+    public class PurchaseService : IPurchaseService
     {
         private readonly IPurchaseRepository purchaseRepository;
 
@@ -16,6 +16,7 @@ namespace SamplePos.Purchase
 
         public void Add(string itemId)
         {
+            Console.WriteLine(@"In purchaseService with " + itemId);
             purchaseRepository.Add(itemId);
         }
     }
